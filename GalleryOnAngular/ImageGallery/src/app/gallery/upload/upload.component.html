@@ -1,0 +1,16 @@
+<mat-card>
+<form [formGroup]="formTemplate" (submit)="onSubmit(formTemplate.value)">
+
+       <img [src]="imgSrc" width="300px" height="250px">
+
+       <input   type="file" formControlName='imageUrl' (change)="showPreview($event)">
+
+    <div class="in">
+        <input matInput formControlName='caption' placeholder="Name">
+    </div>
+   
+           <button mat-button type="submit">Submit</button>
+       
+</form>
+<button mat-button><a routerLink="/gallery/list">Go to gallery</a></button>
+</mat-card>

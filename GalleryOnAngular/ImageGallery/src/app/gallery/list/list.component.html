@@ -1,0 +1,8 @@
+<table *ngIf="list">
+    <tr *ngFor="let list of list">
+        <td>
+            <img [src]="list.imageUrl" alt="">
+            <span>{{list.caption}}</span>
+        </td>
+    </tr>
+</table>
